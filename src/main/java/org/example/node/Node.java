@@ -1,10 +1,12 @@
 package org.example.node;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.example.enumerate.Kind;
 
 @Data
-public abstract class Node {
-    private Kind kind;
+@AllArgsConstructor
+public abstract class Node implements getKind {
+
 
 }

@@ -1,5 +1,7 @@
 package org.example;
 
+import org.example.node.Function;
+import org.example.node.Let;
 import org.example.node.Node;
 import org.example.node.Print;
 
@@ -15,8 +17,18 @@ public class Compilate {
                 System.out.println(primit);
 
             }
+            case LET -> {
+                Node value = ((Let) nodeExpression).getValue();
 
+                if (value instanceof Function){
+                    Object o = useFunction((Function) value);
+                }
+            }
         }
+    }
+
+    private Object useFunction(Function node,){
+            if (node.getParameters())
     }
 
     private Object getPrimit(Node value) {

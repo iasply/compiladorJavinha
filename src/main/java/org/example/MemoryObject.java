@@ -6,10 +6,7 @@ import org.example.enumerate.BinaryOp;
 import org.example.enumerate.Kind;
 import org.example.enumerate.NotTerm;
 import org.example.enumerate.Term;
-import org.example.node.FileJ;
-import org.example.node.Location;
-import org.example.node.Node;
-import org.example.node.Parameter;
+import org.example.node.*;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -72,6 +69,24 @@ public class MemoryObject {
                 continue;
             }
 
+            if (field.getType().equals(List.class) && node.getKind().equals(Kind.CALL)) {
+                JSONArray parameters = expression.getJSONArray("arguments");
+                List<Node> array = new ArrayList<>();
+                int length = parameters.length();
+
+                for (int i = 0; i < length; i++) {
+                    Object o = parameters.get(i);
+                    array.add(toNode((JSONObject) o));
+
+                }
+
+                parameters.toString();
+
+                field.set(node, array);
+                continue;
+            }
+
+
             if (field.getType().equals(Parameter.class)) {
                 field.set(node, parameterSet(expression.getJSONObject("name")));
                 continue;
@@ -91,6 +106,12 @@ public class MemoryObject {
 
                 field.set(node, BinaryOp.valueOf(o.toString()));
                 continue;
+            }
+
+            if (field.getType().equals(Call.class)) {
+               // field.set(node, toNode())
+
+                System.out.println();
             }
 
             field.set(node, expression.get(field.getName()));
@@ -128,6 +149,14 @@ public class MemoryObject {
         return new Gson().fromJson(s.get("location").toString(), Location.class);
 
     }
+
+//    private Call callSet(JSONObject s) {
+//        Call call = new Call();
+//        call.setCallee(toNode(s.getJSONObject("calle")));
+//        call.setArguments(toNode(s.getJSONObject("arguments")));
+//
+//        return call;
+//    }
 
 
 }
