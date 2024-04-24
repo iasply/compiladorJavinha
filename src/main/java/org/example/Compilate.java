@@ -1,48 +1,68 @@
 package org.example;
 
-import org.example.node.Function;
-import org.example.node.Let;
-import org.example.node.Node;
-import org.example.node.Print;
+import com.sun.source.tree.BinaryTree;
+import org.example.node.*;
 
 import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+
+import static java.lang.System.*;
 
 public class Compilate {
+
+    LinkedHashMap<Parameter, Let> memoryLet = new LinkedHashMap<>();
+    LinkedHashMap<List<Parameter>, Function> memoryFunction = new LinkedHashMap<>();
 
     public void run(Node nodeExpression) {
         switch (nodeExpression.getKind()) {
             case PRINT -> {
                 Node value = ((Print) nodeExpression).getValue();
-                Object primit = getPrimit(value);
-                System.out.println(primit);
+                Object object = getPrimitiveValue(value);
 
+                if (object instanceof Node node) {
+                    run(node);
+                    return;
+                }
+
+                out.println(object);
             }
             case LET -> {
-                Node value = ((Let) nodeExpression).getValue();
+                Let let = (Let) nodeExpression;
+                memoryLet.put(let.getName(), let);
+            }
+            case FUNCTION -> {
+                Function function = (Function) nodeExpression;
+                function.getValue();
 
-                if (value instanceof Function){
-                    Object o = useFunction((Function) value);
-                }
+            }
+            case IF -> {
+
+            }
+            case BINARY -> {
+
             }
         }
     }
 
-    private Object useFunction(Function node,){
-            if (node.getParameters())
-    }
+//    private Object useFunction(Function function, Call call){
+//            if (!(function.getParameters().size()  == call.getArguments().size())){
+//                throw new RuntimeException();
+//            }
+//
+//
+//    }
 
-    private Object getPrimit(Node value) {
-        Class<? extends Node> aClass = value.getClass();
+    private Object getPrimitiveValue(Node value) {
         try {
-            Field field = aClass.getDeclaredField("value");
-            field.setAccessible(true);
-            return field.get(value);
-        } catch (IllegalAccessException e) {
-            throw new RuntimeException(e);
-        } catch (NoSuchFieldException e) {
-            throw new RuntimeException(e);
+            Method getterMethod = value.getClass().getMethod("getValue");
+            return getterMethod.invoke(value);
+        } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {
+            throw new IllegalArgumentException("Failed to access primitive value of node", e);
         }
-
     }
 
 

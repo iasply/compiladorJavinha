@@ -5,16 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e49b303d-2786-42c8-a979-7dca3fccd3a1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/enumerate/Primit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/node/getKind.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Compilate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Compilate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MemoryObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/MemoryObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/node/FileJ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/node/FileJ.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/node/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/node/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/node/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/node/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/node/Parameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/node/Parameter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/enumerate/Primit.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,30 +39,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Debug",
-    "Application.Unnamed.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/compiladorJavinha",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "D:/compiladorJava/compiladorJavinha/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/compiladorJavinha&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;D:/compiladorJava/compiladorJavinha/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.example.node" />
@@ -109,7 +104,9 @@
       <workItem from="1713655127836" duration="9544000" />
       <workItem from="1713668775009" duration="1198000" />
       <workItem from="1713715587866" duration="14088000" />
-      <workItem from="1713820703344" duration="4254000" />
+      <workItem from="1713820703344" duration="4675000" />
+      <workItem from="1713906497955" duration="712000" />
+      <workItem from="1713907231124" duration="2336000" />
     </task>
     <servers />
   </component>
@@ -140,9 +137,23 @@
           <option name="timeStamp" value="72" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/Compilate.java</url>
           <line>22</line>
-          <option name="timeStamp" value="73" />
+          <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/Compilate.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="76" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/Compilate.java</url>
+          <line>19</line>
+          <properties class="org.example.Compilate" method="run">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="74" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
